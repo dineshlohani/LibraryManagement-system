@@ -55,7 +55,7 @@
 <div class="text-center">
 <p style="font-size:25px; color:red;"><b>This is an Library Management System which helps 
     you to monitor and control the transcations<br /> in the library. It is used to find books,Calculate fine,Store
-etermine information of the users and books database.</b></p><br />
+etermine information of the users and books database.</b></p><br /><p style="font-size:25px; color:blue"><b>Service</b></p>
 <p style="font-size:20px; color:green;">Use the navigation tabs above of the thumbnails to below to access the particular module</p>
 </div>
 <div class="container">
@@ -71,7 +71,7 @@ etermine information of the users and books database.</b></p><br />
     <div class="col-md-4">
          <img src="~/img/book.jpg" style="width:400px;height:350px;"/><br />
       <h4><b>Books</b></h4><br />
-      It has information about the books including number<br /> of copies.<br />
+      It has information about the books including number<br /> of copies, add book, update, remove.<br />
     <hr/>
          <a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Addbook" ><button type="submit" class="btn btn-primary" > Book</button> </a>
       
@@ -84,5 +84,33 @@ etermine information of the users and books database.</b></p><br />
           <button type="submit" class="btn btn-primary">Reports</button>
       
     </div>
+  </div><hr/><div class="text-center">
+  <p style="font-size:25px; color:blue"><b>Contact Us</b></p>
+  </div>
+  <div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <img src="~/img/Contact-Us.png" style=" height:200px;"/><br />
+      
+    </div>
+    <div class="col-md-2">
+        <ul class="list-group">
+         <label for="vno" class="form-label"><h5>Full Name:</h5></label>
+            <label for="vno" class="form-label"><h5>Email:</h5></label>
+             <label for="vno" class="form-label"><h5>Contact-no:</h5></label>
+            <label for="vno" class="form-label"><h5>Message:</h5></label>
+            </ul>
+    </div>
+    <div class="col-md-5">
+      <input type="text" class="form-control" id="vno" placeholder="Your Name">
+                <input type="email" class="form-control" id="vno" placeholder="abc@gmail.com">
+                <input type="number" class="form-control" id="vno" placeholder="+977">
+                 <input type="text" class="form-control" id="vno" placeholder="message">
+                 
+
+    
+    <button type="submit" class="btn btn-primary">Send</button>
+  </div>
+  
   </div>
 </div>

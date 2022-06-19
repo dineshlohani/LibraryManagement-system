@@ -636,10 +636,10 @@ progress {
 .container-md,
 .container-sm {
   width: 100%;
-  padding-right: var(--bs-gutter-x, 0.75rem);
-  padding-left: var(--bs-gutter-x, 0.75rem);
-  margin-right: auto;
-  margin-left: auto;
+  padding-right: var(--bs-gutter-x, 0.1rem);
+  padding-left: var(--bs-gutter-x, 0.1rem);
+  margin-right:-50px;
+  margin-left: -50px;
 }
 
 @media (min-width: 576px) {
