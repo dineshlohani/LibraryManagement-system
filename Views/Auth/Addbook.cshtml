@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Add Book";
+}
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+<div class="text-center">
+ 
+<h2><b>BOOK INFORMATION</b> </h2>
+<p  style="font-size:20px; font:bold;" >Add a new book:</p>
+<a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Remove"> 
+<button type="submit" class="btn btn-primary" style="margin-left:750px;">Remove Book</button></a>
+<hr />
+</div>
+<div class="row">
+    <div class="col-4">
+        <ul class="list-group">
+            <label for="vno" class="form-label"><h5>The book subject:</h5></label>
+            <label for="vno" class="form-label"><h5>The book title:</h5></label>
+           <label for="vno" class="form-label"><h5>The name of the author(s):</h5></label>
+            <label for="vno" class="form-label"><h5>The name of the publisher:</h5></label>
+            <label for="vno" class="form-label"><h5>Copyright for the book:</h5></label>
+            <label for="vno" class="form-label"><h5>The edition number:</h5></label>
+            <label for="vno" class="form-label"><h5>The number of pages:</h5></label>
+            <label for="vno" class="form-label"><h5>ISBN for the book:</h5></label>
+            <label for="vno" class="form-label"><h5>The numbers of copies:</h5></label>
+            <label for="vno" class="form-label"><h5>The name of the library:</h5></label>
+            <label for="vno" class="form-label"><h5>Shelf No:</h5></label>
+             <label for="img" class="form-label"><h5>Image of book</h5></label>
+        </ul>
+    </div>
+    <div class="col-8">
+       
+       
+        <form method="post" enctype="multipart/form-data">
+            <div class="mb-4">
+                
+                <input type="text" class="form-control" id="vno" placeholder=".NET Computing">
+                <input type="text" class="form-control" id="vno" placeholder="Head First">
+                <input type="text" class="form-control" id="vno" placeholder="Andrew Steliman">
+                <input type="text" class="form-control" id="vno" placeholder="KEC">
+                <input type="text" class="form-control" id="vno" placeholder="Author">
+                <input type="number" class="form-control" id="vno" placeholder="7">
+                <input type="number" class="form-control" id="vno" placeholder="320">
+                <input type="number" class="form-control" id="vno" placeholder="45622">
+                 <input type="number" class="form-control" id="vno" placeholder="5">
+                  <input type="text" class="form-control" id="vno" placeholder="Asian library">
+                   <input type="text" class="form-control" id="vno" placeholder="35">
+
+         
+            
+               
+                <input type="file" class="form-control" id="img">
+            
+           
+            <button type="submit" class="btn btn-primary">Insert the information</button>
+            <hr /><hr/>
+            
+            <button type="submit" class="btn btn-primary">Exit</button>
+
+        </form>
+    </div>
+</div>
+

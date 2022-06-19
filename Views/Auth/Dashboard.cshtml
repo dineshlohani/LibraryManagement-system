@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+
+<div class="text-center">
+
+    <b> <h2>  Library Membership Form</h2></b><br />
+    <a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Removemember"> <button type="submit" class="btn btn-primary" style="margin-left:800px;">Remove member</button></a>
+
+
+    <hr/><br />
+    <form class="row g-3">
+    <div class="col-md-6">
+    <label for="Name" class="form-label">Name of applicant *</label>
+    <input type="text" class="form-control" id="inputEmail4">
+  </div> 
+    <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Email *</label>
+    <input type="email" class="form-control" id="inputEmail4"  placeholder="ex:myname@example.com">
+  </div>
+   <div class="col-md-6">
+    <label for="phone" class="form-label">Mobile Number *</label>
+    <input type="number" class="form-control" id="Number">
+  </div>
+   <div class="col-md-6">
+    <label for="date" class="form-label">Birth Date</label>
+    <input type="date" class="form-control" id="Date">
+  </div>
+  <div class="col-6">
+    <label for="inputAddress" class="form-label">Address *</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <div class="col-6">
+    <label for="inputAddress2" class="form-label">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+  </div>
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label">City</label>
+    <input type="text" class="form-control" id="inputCity">
+  </div>
+  <div class="col-md-4">
+    <label for="inputState" class="form-label">State</label>
+    <select id="inputState" class="form-select">
+      <option selected>Choose...</option>
+      <option>...</option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label">Zip</label>
+    <input type="text" class="form-control" id="inputZip">
+  </div>
+  <div class="col-md-6">
+    <label for="inputState" class="form-label">Course</label>
+    <select id="inputState" class="form-select">
+      <option selected>Please Select</option>
+      <option>...</option>
+    </select>
+  </div>
+  <div class="col-md-6">
+    <label for="inputState" class="form-label">Gender</label>
+    <select id="inputState" class="form-select">
+      <option selected>Please Select</option>
+      <option>Male</option><option>Female</option><option>NA</option>
+    </select>
+  </div>
+  <div class="col-md-6">
+                <label for="img" class="form-label">Photo Of applicant *</label>
+                <input type="file" class="form-control" id="img">
+            </div>
+            <div class="col-md-6">
+                <label for="img" class="form-label">Signature Of applicant *</label>
+                <input type="file" class="form-control" id="img">
+            </div>
+ <div class="col-md-6">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        I hereby declare that I will accept all terms and conditions of 
+        library and hence will responsible for any issue related with me
+        from this library. I will be dued if library found any wrong with me.
+      </label>
+    </div>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Submit Application</button>
+  </div>
+</form>
+</div>
+</div>
+</div>
