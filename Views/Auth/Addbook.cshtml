@@ -1,62 +1,91 @@
 ﻿@{
     ViewData["Title"] = "Add Book";
 }
-<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-<div class="text-center">
- 
-<h2><b>BOOK INFORMATION</b> </h2>
-<p  style="font-size:20px; font:bold;" >Add a new book:</p>
-<a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Remove"> 
-<button type="submit" class="btn btn-primary" style="margin-left:750px;">Remove Book</button></a>
-<hr />
-</div>
-<div class="row">
-    <div class="col-4">
-        <ul class="list-group">
-            <label for="vno" class="form-label"><h5>The book subject:</h5></label>
-            <label for="vno" class="form-label"><h5>The book title:</h5></label>
-           <label for="vno" class="form-label"><h5>The name of the author(s):</h5></label>
-            <label for="vno" class="form-label"><h5>The name of the publisher:</h5></label>
-            <label for="vno" class="form-label"><h5>Copyright for the book:</h5></label>
-            <label for="vno" class="form-label"><h5>The edition number:</h5></label>
-            <label for="vno" class="form-label"><h5>The number of pages:</h5></label>
-            <label for="vno" class="form-label"><h5>ISBN for the book:</h5></label>
-            <label for="vno" class="form-label"><h5>The numbers of copies:</h5></label>
-            <label for="vno" class="form-label"><h5>The name of the library:</h5></label>
-            <label for="vno" class="form-label"><h5>Shelf No:</h5></label>
-             <label for="img" class="form-label"><h5>Image of book</h5></label>
-        </ul>
-    </div>
-    <div class="col-8">
-       
-       
-        <form method="post" enctype="multipart/form-data">
-            <div class="mb-4">
-                
-                <input type="text" class="form-control" id="vno" placeholder=".NET Computing">
-                <input type="text" class="form-control" id="vno" placeholder="Head First">
-                <input type="text" class="form-control" id="vno" placeholder="Andrew Steliman">
-                <input type="text" class="form-control" id="vno" placeholder="KEC">
-                <input type="text" class="form-control" id="vno" placeholder="Author">
-                <input type="number" class="form-control" id="vno" placeholder="7">
-                <input type="number" class="form-control" id="vno" placeholder="320">
-                <input type="number" class="form-control" id="vno" placeholder="45622">
-                 <input type="number" class="form-control" id="vno" placeholder="5">
-                  <input type="text" class="form-control" id="vno" placeholder="Asian library">
-                   <input type="text" class="form-control" id="vno" placeholder="35">
+@model LibraryManagementSystem.Models.Addbook
 
-         
-            
-               
-                <input type="file" class="form-control" id="img">
-            
+ @if (TempData["error"] is not null)
+        {
+          <div class"alert alert-danger">  @TempData["error"]</div>
+        }
+         @if (TempData["error"] is not null)
+        {
+          <div class"alert alert-success">  @TempData["msg"]</div>
+        }
+
+<a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Remove"> 
+<button type="submit" class="btn btn-primary" style="margin-left:1300px;">Remove Book</button></a>
+<hr /><div class="row">
+ <div class="col-md-4">
+    <h3 style="font-size:30px; color:red; margin-left:60px;">Register new book</h3>
+ </div>
+<div class="row justify-content-md-end">
+    <div class="col-md-4">
+       <h2 class="text-danger text-center">Add New Book</h2>
+       <hr/>
+       
+      
+        <form method="post" asp-controller="Auth"  asp-action="Addbook" >
+            <div class="mb-3">
+                <label  class="form-label" asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" />
+                <span class="text-danger" asp-validation-for="Name" ></span></div>
+
+                <div class="mb-3">
+                  <label  class="form-label" asp-for="Subject"></label>
+                <input asp-for="Subject" class="form-control" />
+                <span class="text-danger" asp-validation-for="Subject" ></span></div>
+
+                <div class="mb-3">
+                  <label  class="form-label" asp-for="Author"></label>
+                <input asp-for="Author" class="form-control" />
+                <span class="text-danger" asp-validation-for="Author" ></span></div>
+
+                <div class="mb-3">
+             <label  class="form-label" asp-for="Publisher"></label>
+                <input asp-for="Publisher" class="form-control" />
+                <span class="text-danger" asp-validation-for="Publisher" ></span></div>
+
+                <div class="mb-3">
+              <label  class="form-label" asp-for="Page"></label>
+                <input asp-for="Page" class="form-control" />
+                <span class="text-danger" asp-validation-for="Page"></span></div>
+
+
+                <div class="mb-3">
+                <label  class="form-label" asp-for="Isbn"></label>
+                <input asp-for="Isbn" class="form-control" />
+                <span class="text-danger" asp-validation-for="Isbn" ></span></div>
+
+                <div class="mb-3">
+                      <label  class="form-label" asp-for="Copies"></label>
+                <input asp-for="Copies" class="form-control" />
+                <span class="text-danger" asp-validation-for="Copies" ></span></div>
+
+                <div class="mb-3">
+                 <label  class="form-label" asp-for="Libraryname"></label>
+                 <input asp-for="Libraryname" class="form-control" />
+                <span class="text-danger" asp-validation-for="Libraryname" ></span></div>
+
+                <div class="mb-3">
+                 <label  class="form-label" asp-for="Shelfno"></label>
+                 <input asp-for="Shelfno" class="form-control" />
+                <span class="text-danger" asp-validation-for="Shelfno" ></span></div>
+
+                <div class="mb-3">
+                   <label  class="form-label" asp-for="Description"></label>
+                 <textarea asp-for="Description" class="form-control"></textarea>
+                <span class="text-danger" asp-validation-for="Description" ></span></div>
+                 
+                <hr/>
+            <button type="submit" class="btn btn-success">Save</button>
            
-            <button type="submit" class="btn btn-primary">Insert the information</button>
-            <hr /><hr/>
-            
-            <button type="submit" class="btn btn-primary">Exit</button>
 
         </form>
     </div>
+    <div class="col-md-4">
+    </div>
 </div>
+</div>
+
+
 

@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-
+using LibraryManagementSystem.Models;
 
 namespace LibraryManagementSystem.Controllers
 {
     public class AuthController : Controller
     {
+        public DatabaseContext _context;
+        public AuthController(DatabaseContext context)
+        {
+            _context = context;
+        }
         public ViewResult Signup()
         {
             return View();
@@ -62,6 +67,43 @@ namespace LibraryManagementSystem.Controllers
         }
         public ViewResult Return()
         {
+            return View();
+        }
+        public ViewResult Ticket()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Addbook am)
+        {
+            if(ModelState.IsValid)
+            {
+                var a = new Addbook()
+                {
+                    Name = am.Name,
+                    Subject = am.Subject,
+                    Author = am.Author,
+                    Publisher = am.Publisher,
+                    Page = am.Page,
+                    Isbn = am.Isbn,
+                    Copies = am.Copies,
+                    Libraryname = am.Libraryname,
+                    Shelfno = am.Shelfno,
+                    Description = am.Description,
+                    
+
+                };
+                _context.Addbooks.Add(a);// insert the data
+                _context.SaveChanges();
+                TempData["msg"] = "Data Sucessfulyy entered!!";
+                return View();
+            }
+            else
+            {
+                TempData["error"] = "Feilds are empty, fill all the fields.";
+                return View();
+            }
             return View();
         }
     }

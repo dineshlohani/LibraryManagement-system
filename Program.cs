@@ -1,8 +1,13 @@
+using LibraryManagementSystem.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+String connectionString = @" Data Source=DESKTOP-FGCVNLT\SQLEXPRESS;Initial Catalog=library;Persist Security Info=True;User ID=sa;Password=Dinesh@@003600";
+builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connectionString));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
