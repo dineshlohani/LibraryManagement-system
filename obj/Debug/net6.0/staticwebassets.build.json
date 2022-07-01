@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BgbXIo/6tkEySAy3+tZyx7oO7JiQYtBoTzmHlNWv5ko=",
+  "Hash": "aQZCmD/zZs6m/jlOxjNN7y7bFmzfAWT+5D0jERTc4JA=",
   "Source": "LibraryManagementSystem",
   "BasePath": "_content/LibraryManagementSystem",
   "Mode": "Default",
@@ -117,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\book.jpg"
+    },
+    {
+      "Identity": "D:\\LibraryManagementSystem\\wwwroot\\img\\contact.png",
+      "SourceId": "LibraryManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\LibraryManagementSystem\\wwwroot\\",
+      "BasePath": "_content/LibraryManagementSystem",
+      "RelativePath": "img/contact.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\contact.png"
     },
     {
       "Identity": "D:\\LibraryManagementSystem\\wwwroot\\img\\Contact-Us.png",

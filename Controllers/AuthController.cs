@@ -75,12 +75,13 @@ namespace LibraryManagementSystem.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Addbook am)
+        public IActionResult Addbook(Addbook am)
         {
             if(ModelState.IsValid)
             {
                 var a = new Addbook()
                 {
+                    Id = am.Id,
                     Name = am.Name,
                     Subject = am.Subject,
                     Author = am.Author,
@@ -92,7 +93,7 @@ namespace LibraryManagementSystem.Controllers
                     Shelfno = am.Shelfno,
                     Description = am.Description,
                     
-
+                    
                 };
                 _context.Addbooks.Add(a);// insert the data
                 _context.SaveChanges();
@@ -104,7 +105,7 @@ namespace LibraryManagementSystem.Controllers
                 TempData["error"] = "Feilds are empty, fill all the fields.";
                 return View();
             }
-            return View();
+            
         }
     }
 }

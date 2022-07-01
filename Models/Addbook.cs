@@ -4,7 +4,7 @@ namespace LibraryManagementSystem.Models
 {
     public class Addbook
     {
-        [key]
+        [Key]
         public int Id { get; set; }
 
         [Required]
