@@ -1,6 +1,17 @@
 ﻿@{
     ViewData["Title"] = "Dashboard";
 }
+@model LibraryManagementSystem.Models.Dashboard
+
+ @if (TempData["error"] is not null)
+        {
+          <div class="alert alert-danger">@TempData["error"]</div>
+        }
+ @if (TempData["msg"] is not null)
+        {
+          <div class="alert alert-success">@TempData["msg"]</div>
+        }
+
 
  <div  class="pp" style="margin-right:80px; margin-left:80px;>
 
@@ -11,67 +22,66 @@
     
          
     <hr/><br />
-    <form class="row g-3" >
+   <form method="post" asp-controller="Auth"  asp-action="Addbook" >
+    <div class="row g-3" >
+        <div class="col-6">
+     <label asp-for="Appid" class="form-label">Applicant Id *</label>
+    <input type="text" class="form-control" aps-validation-for="Appid">
+  </div>
     <div class="col-md-6">
-    <label for="Name" class="form-label">Name of applicant *</label>
-    <input type="text" class="form-control" id="inputEmail4">
+        <label asp-for="Name" class="form-label">Name of applicant *</label>
+    <input type="text" class="form-control" aps-validation-for="Name">
+   
   </div> 
     <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Email *</label>
-    <input type="email" class="form-control" id="inputEmail4"  placeholder="ex:myname@example.com">
+   <label asp-for="Email" class="form-label">Email *</label>
+    <input type="email" class="form-control" aps-validation-for="Email">
   </div>
+
    <div class="col-md-6">
-    <label for="phone" class="form-label">Mobile Number *</label>
-    <input type="number" class="form-control" id="Number">
+    <label asp-for="Number" class="form-label">Mobile Number *</label>
+    <input type="number" class="form-control" aps-validation-for="Number">
   </div>
+
    <div class="col-md-6">
-    <label for="date" class="form-label">Birth Date</label>
-    <input type="date" class="form-control" id="Date">
+    <label asp-for="Birth" class="form-label">Birth Date</label>
+    <input type="date" class="form-control" asp-validation-for="Birth">
   </div>
   <div class="col-6">
-    <label for="inputAddress" class="form-label">Address *</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <label asp-for="Address" class="form-label">Address *</label>
+    <input type="text" class="form-control" aps-validation-for="Adress">
   </div>
-  <div class="col-6">
-    <label for="inputAddress2" class="form-label">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-  </div>
+  
   <div class="col-md-6">
-    <label for="inputCity" class="form-label">City</label>
-    <input type="text" class="form-control" id="inputCity">
+   <label asp-for="City" class="form-label">City Name*</label>
+    <input type="text" class="form-control" aps-validation-for="City">
   </div>
+
   <div class="col-md-4">
-    <label for="inputState" class="form-label">State</label>
-    <select id="inputState" class="form-select">
-      <option selected>Choose...</option>
-      <option>...</option>
-    </select>
+    <label asp-for="State" class="form-label">State *</label>
+    <input type="text" class="form-control" aps-validation-for="State">
+  
   </div>
   <div class="col-md-2">
-    <label for="inputZip" class="form-label">Zip</label>
-    <input type="text" class="form-control" id="inputZip">
+    <label asp-for="Zip" class="form-label">Zip *</label>
+    <input type="number" class="form-control" aps-validation-for="Zip">
+  </div>
+
+  <div class="col-md-6">
+   <label asp-for="Course" class="form-label">Course *</label>
+    <input type="text" class="form-control" aps-validation-for="Course">
   </div>
   <div class="col-md-6">
-    <label for="inputState" class="form-label">Course</label>
-    <select id="inputState" class="form-select">
-      <option selected>Please Select</option>
-      <option>...</option>
-    </select>
+   <label asp-for="Gender" class="form-label">Gender*</label>
+    <input type="text" class="form-control" aps-validation-for="Gender">
   </div>
   <div class="col-md-6">
-    <label for="inputState" class="form-label">Gender</label>
-    <select id="inputState" class="form-select">
-      <option selected>Please Select</option>
-      <option>Male</option><option>Female</option><option>NA</option>
-    </select>
-  </div>
-  <div class="col-md-6">
-                <label for="img" class="form-label">Photo Of applicant *</label>
-                <input type="file" class="form-control" id="img">
+               <label asp-for="Image" class="form-label">Image of applicant *</label>
+    <input type="file" class="form-control" aps-validation-for="Image">
             </div>
             <div class="col-md-6">
-                <label for="img" class="form-label">Signature Of applicant *</label>
-                <input type="file" class="form-control" id="img">
+                 <label asp-for="Signature" class="form-label">Id of applicant *</label>
+    <input type="file" class="form-control" aps-validation-for="Signature">
             </div>
  <div class="col-md-6" >
     <div class="form-check">

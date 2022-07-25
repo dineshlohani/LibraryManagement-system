@@ -9,6 +9,9 @@ namespace LibraryManagementSystem.Models
 
         }
         public DbSet<Addbook> Addbooks { get; set;  }
-       
+        public DbSet<Dashboard> Dashboardss { get; set; }
+
+
+
     }
 }

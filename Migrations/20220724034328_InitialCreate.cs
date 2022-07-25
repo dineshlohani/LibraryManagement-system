@@ -18,8 +18,6 @@ namespace LibraryManagementSystem.Migrations
                     Subject = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Author = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Publisher = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Copyright = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Edition = table.Column<int>(type: "int", nullable: false),
                     Page = table.Column<int>(type: "int", nullable: false),
                     Isbn = table.Column<int>(type: "int", nullable: false),
                     Copies = table.Column<string>(type: "nvarchar(max)", nullable: false),

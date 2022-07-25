@@ -5,11 +5,11 @@
 
  @if (TempData["error"] is not null)
         {
-          <div class"alert alert-danger">@TempData["error"]</div>
+          <div class="alert alert-danger">@TempData["error"]</div>
         }
  @if (TempData["msg"] is not null)
         {
-          <div class"alert alert-success">@TempData["msg"]</div>
+          <div class="alert alert-success">@TempData["msg"]</div>
         }
 
 <a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Remove"> 
@@ -25,10 +25,8 @@
        
       
         <form method="post" asp-controller="Auth"  asp-action="Addbook" >
-            <div class="mb-3">
-                <label  class="form-label" asp-for="Id"></label>
-                <input asp-for="Id" class="form-control" />
-                <span class="text-danger" asp-validation-for="Id" ></span></div>
+            
+            
 
                 <div class="mb-3">
                 <label  class="form-label" asp-for="Name"></label>

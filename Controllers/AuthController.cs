@@ -39,16 +39,6 @@ namespace LibraryManagementSystem.Controllers
             return View();
         }
 
-
-        public ViewResult Vehicle()
-        {
-            return View();
-        }
-
-        public ViewResult addService()
-        {
-            return View();
-        }
         public ViewResult Remove()
         {
             return View();
@@ -69,10 +59,7 @@ namespace LibraryManagementSystem.Controllers
         {
             return View();
         }
-        public ViewResult Ticket()
-        {
-            return View();
-        }
+   
 
         [HttpPost]
         public IActionResult Addbook(Addbook am)
@@ -81,7 +68,7 @@ namespace LibraryManagementSystem.Controllers
             {
                 var a = new Addbook()
                 {
-                    Id = am.Id,
+                   // Id = am.Id,
                     Name = am.Name,
                     Subject = am.Subject,
                     Author = am.Author,
@@ -91,12 +78,13 @@ namespace LibraryManagementSystem.Controllers
                     Copies = am.Copies,
                     Libraryname = am.Libraryname,
                     Shelfno = am.Shelfno,
-                    Description = am.Description,
+                    Description = am.Description
                     
                     
                 };
-                _context.Addbooks.Add(a);// insert the data
+                _context.Addbooks.Add(am);// insert the data
                 _context.SaveChanges();
+
                 TempData["msg"] = "Data Sucessfulyy entered!!";
                 return View();
             }
@@ -105,7 +93,49 @@ namespace LibraryManagementSystem.Controllers
                 TempData["error"] = "Feilds are empty, fill all the fields.";
                 return View();
             }
-            
+
+        }
+        [HttpPost]
+        public IActionResult Dashboard(Dashboard ds)
+        {
+            if (ModelState.IsValid)
+            {
+                var d = new Dashboard()
+                {
+                  Appid = ds.Appid,
+                    Name = ds.Name,
+                    Email = ds.Email,
+                    Number = ds.Number,
+                    Birth = ds.Birth,
+                    Address = ds.Address,
+                    City = ds.City,
+                    State = ds.State,
+                    Gender = ds.Gender,
+                    Image = ds.Image,
+                  Course = ds.Course,
+                  Zip = ds.Zip,
+                  Signature = ds.Signature
+
+
+                };
+                _context.Dashboardss.Add(ds);// insert the data
+                _context.SaveChanges();
+
+                TempData["msg"] = "Data Sucessfully entered!!";
+                return View();
+            }
+            else
+            {
+                TempData["error"] = "Feilds are empty, fill all the fields.";
+                return View();
+            }
+
         }
     }
 }
+
+        
+
+
+
+
