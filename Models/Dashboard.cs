@@ -17,8 +17,8 @@ namespace LibraryManagementSystem.Models
         public string Appid { get; set; }
         public string Name { get; set; }
 
-        [NotMapped]
-        public EmailAddressAttribute Email { get; set; }
+        
+        public string Email { get; set; }
 
       
         public int Number { get; set; }
@@ -40,10 +40,10 @@ namespace LibraryManagementSystem.Models
 
         public string Gender { get; set; }
 
-        [NotMapped]
+        
         public string Image { get; set; }
 
-        [NotMapped]
+        
         public string Signature { get; set; }
 
 
