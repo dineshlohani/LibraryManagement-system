@@ -1,1 +1,61 @@
 ﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@model IEnumerable<LibraryManagementSystem.Models.Addbook>
+
+<div class = "row justify-content-center-md-center">
+    <div class="col-8" style="margin-left:100px;">
+        <h4 class="text-danger">List of Books</h4>
+        <a class="btn btn-success" asp-action="Addbook" asp-controller="Auth">Add Book</a>
+        <hr />
+
+ @if (TempData["error"] is not null)
+        {
+          <div class="alert alert-danger">@TempData["error"]</div>
+        }
+ @if (TempData["msg"] is not null)
+        {
+          <div class="alert alert-success">@TempData["msg"]</div>
+        }
+
+        <table class ="table table-border">
+            <thead>
+                
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Author</th>
+                <th>Publisher</th>
+                <th>Page</th>
+                <th>Isbn</th>
+                <th>Copies</th>
+                <th>Libraryname</th>
+                <th>Shelfno</th>
+                
+            </thead>
+            <tbody>
+                @foreach(var a in Model)
+                {
+                  <tr>
+                    
+                      <td class="text-center align:left">@a.Name</td>
+                      <td class="text-center">@a.Subject</td>
+                      <td class="text-center">@a.Author</td>
+                      <td class="text-center">@a.Publisher</td>
+                      <td class="text-center">@a.Page</td>
+                      <td class="text-center">@a.Isbn</td>
+                      <td class="text-center">@a.Copies</td>
+                      <td class="text-center">@a.Libraryname</td>
+                      <td class="text-center">@a.Shelfno</td>
+                     
+                      <td>
+                          <a class="btn btn-primary" asp-controller="Auth" asp-action="Edit" asp-route-id="@a.Id">Edit</a>
+                          <a class="btn btn-danger" asp-controller="Auth" asp-action="Remove" asp-route-id="@a.Id">Delete</a>
+                      </td>
+                  </tr>  
+                }
+            </tbody>
+        </table>
+        <hr/>
+    </div>
+</div>

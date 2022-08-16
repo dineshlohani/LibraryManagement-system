@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\LibraryManagementSystem\\LibraryManagementSystem.csproj": {}
+    "E:\\LibraryManagementSystem\\LibraryManagementSystem.csproj": {}
   },
   "projects": {
-    "D:\\LibraryManagementSystem\\LibraryManagementSystem.csproj": {
+    "E:\\LibraryManagementSystem\\LibraryManagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LibraryManagementSystem\\LibraryManagementSystem.csproj",
+        "projectUniqueName": "E:\\LibraryManagementSystem\\LibraryManagementSystem.csproj",
         "projectName": "LibraryManagementSystem",
-        "projectPath": "D:\\LibraryManagementSystem\\LibraryManagementSystem.csproj",
+        "projectPath": "E:\\LibraryManagementSystem\\LibraryManagementSystem.csproj",
         "packagesPath": "C:\\Users\\dinesh\\.nuget\\packages\\",
-        "outputPath": "D:\\LibraryManagementSystem\\obj\\",
+        "outputPath": "E:\\LibraryManagementSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -57,6 +57,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.6, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.7, )"
             }
           },
           "imports": [

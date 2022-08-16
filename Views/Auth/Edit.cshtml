@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewData["Title"] = "Edit Book";
+}
+@model LibraryManagementSystem.Models.Addbook
+
+ @if (TempData["error"] is not null)
+        {
+          <div class="alert alert-danger">@TempData["error"]</div>
+        }
+ @if (TempData["msg"] is not null)
+        {
+          <div class="alert alert-success">@TempData["msg"]</div>
+        }
+        
+<hr /><div class="row">
+ <div class="col-md-4">
+    <h3 style="font-size:30px; color:red; margin-left:60px;"> Are You Want To</h3>
+ </div>
+<div class="row justify-content-md-end">
+    <div class="col-md-4">
+       <h2 class="text-danger text-center">Edit Book</h2>
+       <hr/>
+       
+      
+        <form method="post" asp-controller="Auth"  asp-action="Index" >
+            <input type="hidden" asp-for="Id" />
+            
+
+                <div class="mb-3">
+                <label  class="form-label" asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" />
+                <span class="text-danger" asp-validation-for="Name" ></span></div>
+
+                <div class="mb-3">
+                  <label  class="form-label" asp-for="Subject"></label>
+                <input asp-for="Subject" class="form-control" />
+                <span class="text-danger" asp-validation-for="Subject" ></span></div>
+
+                <div class="mb-3">
+                  <label  class="form-label" asp-for="Author"></label>
+                <input asp-for="Author" class="form-control" />
+                <span class="text-danger" asp-validation-for="Author" ></span></div>
+
+                <div class="mb-3">
+             <label  class="form-label" asp-for="Publisher"></label>
+                <input asp-for="Publisher" class="form-control" />
+                <span class="text-danger" asp-validation-for="Publisher" ></span></div>
+
+                <div class="mb-3">
+              <label  class="form-label" asp-for="Page"></label>
+                <input asp-for="Page" class="form-control" />
+                <span class="text-danger" asp-validation-for="Page"></span></div>
+
+
+                <div class="mb-3">
+                <label  class="form-label" asp-for="Isbn"></label>
+                <input asp-for="Isbn" class="form-control" />
+                <span class="text-danger" asp-validation-for="Isbn" ></span></div>
+
+                <div class="mb-3">
+                      <label  class="form-label" asp-for="Copies"></label>
+                <input asp-for="Copies" class="form-control" />
+                <span class="text-danger" asp-validation-for="Copies" ></span></div>
+
+                <div class="mb-3">
+                 <label  class="form-label" asp-for="Libraryname"></label>
+                 <input asp-for="Libraryname" class="form-control" />
+                <span class="text-danger" asp-validation-for="Libraryname" ></span></div>
+
+                <div class="mb-3">
+                 <label  class="form-label" asp-for="Shelfno"></label>
+                 <input asp-for="Shelfno" class="form-control" />
+                <span class="text-danger" asp-validation-for="Shelfno" ></span></div>
+
+                <div class="mb-3">
+                   <label  class="form-label" asp-for="Description"></label>
+                 <textarea asp-for="Description" class="form-control"></textarea>
+                <span class="text-danger" asp-validation-for="Description" ></span></div>
+                 
+                <hr/>
+            <button type="submit" class="btn btn-success">Save</button>
+           
+
+        </form>
+    </div>
+    <div class="col-md-4">
+    </div>
+</div>
+</div>
+
+
+

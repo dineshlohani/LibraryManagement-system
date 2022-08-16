@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+}
+@model IEnumerable<LibraryManagementSystem.Models.Dashboard>
+
+<div class = "row justify-content-center-md-center">
+    <div class="col-8" style="margin-left:100px;">
+        <h4 class="text-danger">List of Books</h4>
+        <a class="btn btn-success" asp-action="Dashboard" asp-controller="Auth">Add Member</a>
+        <hr />
+
+ @if (TempData["error"] is not null)
+        {
+          <div class="alert alert-danger">@TempData["error"]</div>
+        }
+ @if (TempData["msg"] is not null)
+        {
+          <div class="alert alert-success">@TempData["msg"]</div>
+        }
+
+        <table class ="table table-border">
+            <thead>
+                  <th>App-Id</th>
+                <th>Name</th>
+                
+                <th>Mobile No</th>
+                <th>Birth Date</th>
+                <th>Address</th>
+                <th>City Name</th>
+                <th>State</th>
+                <th>Zip</th>
+                <th>Course</th>
+                  <th>Gender</th>
+                
+            </thead>
+            <tbody>
+                @foreach(var e in Model)
+                {
+                  <tr>
+                    
+                      <td class="text-center">@e.Appid</td>
+                      <td class="text-center">@e.Name</td>
+                       
+                        <td class="text-center">@e.Number</td>
+                         <td class="text-center">@e.Birth</td>
+                          <td class="text-center">@e.Address</td>
+                           <td class="text-center">@e.City</td>
+                            <td class="text-center">@e.State</td>
+                             <td class="text-center">@e.Zip</td>
+                              <td class="text-center">@e.Course</td>
+                               <td class="text-center">@e.Gender</td>
+                      
+                      <td>
+                        
+                      <td>
+                          <a class="btn btn-primary" asp-controller="Auth" asp-action="Edit" asp-route-id="@e.Id">Edit</a>
+                          <a class="btn btn-danger" asp-controller="Auth" asp-action="Remove" asp-route-id="@e.Id">Delete</a>
+                      </td> 
+                      </td>
+                  </tr>  
+                }
+            </tbody>
+        </table>
+        <hr/>
+    </div>
+</div>
